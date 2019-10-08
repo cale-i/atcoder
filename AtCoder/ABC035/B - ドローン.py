@@ -1,0 +1,11 @@
+s=input()
+t=int(input())
+u=s.count('U')
+d=s.count('D')
+l=s.count('L')
+r=s.count('R')
+x=s.count('?')
+ans=abs(u-d)+abs(l-r)
+if t==1:ans+=x
+else:ans=max(len(s)%2,ans-x)
+print(ans)
