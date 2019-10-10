@@ -1,5 +1,4 @@
-# Union-Find
-# Disjoint-Set
+# 2019/10/10
 
 class unionfind():
     def __init__(self,n):
@@ -28,6 +27,12 @@ class unionfind():
                 self.rank[x]+=1
         if x!=y:self.groups-=1 # 連結成分の個数
 
- 
-c=unionfind(10)
-print(c)
+
+n,m=map(int,input().split())
+
+uf=unionfind(n)
+
+for i in range(m):
+    x,y,z=map(int,input().split())
+    uf.unite(x,y)
+print(uf.groups)
