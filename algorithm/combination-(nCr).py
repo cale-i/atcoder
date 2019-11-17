@@ -25,7 +25,7 @@ class Combination():
             self.inv.append(mod-self.inv[mod%i]*(mod//i)%mod)
             self.finv.append(self.finv[i-1]*self.inv[i]%mod)        
 
-    def com(self,n,r,mod=10**9+7):
+    def comb(self,n,r,mod=10**9+7):
         if n<r:return 0
         if n<0|r<0:return 0
         return self.fac[n]*(self.finv[r]*self.finv[n-r]%mod)%mod
