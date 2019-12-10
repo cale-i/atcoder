@@ -7,5 +7,3 @@ for i in range(n-1):
         s[i]='C'
         s[i+1]='A'
 print(''.join(s[::-1]))
-        
-    
