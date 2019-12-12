@@ -1,25 +1,20 @@
-# 2019/10/07
+# 2019/12/12
 
 s=list(input())
-n=len(s)
 k=int(input())
-cnt=0
-if n==1:
-    print(k//2)
-    exit()
-s*=2
-nn=n*2
-i,j=0,0
-cnt=0
-for i in range(1,nn):
+if k>1:s*=2
+n=len(s)
+f_cnt=0
+s_cnt=0
+for i in range(1,n):
     if s[i]==s[i-1]:
-        cnt+-1
-cnt*=2
+        s[i]='@'
+        if i<=(n//2-1):f_cnt+=1
+        else:s_cnt+=1
+if k%2:
+    cnt=(f_cnt)*-(-k//2)+s_cnt*(k//2)
+else:
+    cnt=(f_cnt+s_cnt)*(k//2)
 if s[0]==s[-1]:
-    cnt-=1
-
-
-print(cnt*k)
-
-
-
+    cnt+=k-1
+print(cnt)
