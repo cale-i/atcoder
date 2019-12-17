@@ -2,9 +2,13 @@ import unittest
 import bh
 
 class BH(unittest.TestCase):
+    
+    def tearDownClass(self):
+        pass
+
     def setUp(self):
         pass
-    
+
     def tearDown(self):
         pass
 
@@ -19,7 +23,7 @@ class BH(unittest.TestCase):
 
     def test_4(self):
         self.assertEqual('No', bh.bh('aaaabaaa'))
-
+    
     def test_5(self):
         self.assertEqual('No',bh.bh(input()))
 
