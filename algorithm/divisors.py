@@ -7,5 +7,5 @@ def divisors(n):
             div.append(i)
             if i!=n//i:
                 div.append(n//i)
-    # div.sort()
+    div.sort()
     return div
